@@ -5,15 +5,15 @@ body {
 }
 
 h2 {
-  font-size: 34px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
-  font-size: 22px;
-  font-weight: 550;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 p {
@@ -30,43 +30,30 @@ section.alternate-background {
   color: #fff;
 }
 
-/* Responsive Images */
 main img {
   width: 100%;
+  margin: 0 20px 20px 0px;
 }
 
 /* ---  Groups & Items --- */
 
 .group {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  text-align: start;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.group img {
+  width: 100%;
 }
 
-.form-item {
+.flex-start {
+  align-items: flex-start;
+}
+
+.item {
   flex: 1;
-  margin: 12px 5px;
-}
-
-.about-item {
-  flex: 1;
-  margin: 12px;
-}
-
-.ideas-item {
-  flex: 1;
-  margin: 12px;
-}
-
-.host-item {
-  flex: 1;
-  margin: 12px;
 }
 
 /* -------  Navigation ------- */
@@ -81,17 +68,13 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
-  text-align: center;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
 }
 
 header nav ul {
   display: flex;
-  justify-content: center;
+  margin: 10px 0px 15px 50px;
+  padding-bottom: 0px;
+  max-width: 25%;
 }
 
 header nav ul li {
@@ -100,7 +83,6 @@ header nav ul li {
 
 header nav ul li a {
   color: #fff;
-  font-size: 20px;
   text-decoration: none;
   padding: 0 20px 0 0;
 }
@@ -110,32 +92,62 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+/* -------  form classes ------- */
+.form-info {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 6px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-left: 15px;
+}
+
+.input {
+  float: right;
+  margin: 0px 20px 20px 0px;
+}
+
+.dropdown {
+  float: right;
+  width: 50%;
+}
 /* -------  Search Form ------- */
 
 form {
   border: 2px solid #ff385c;
-  margin: 0 10px;
   padding: 10px;
+  font-family: "CentraNo2", sans-serif;
 }
 
 form label {
+  display: inline-block;
+  color: #282e33;
+  margin-bottom: 8px;
+  font-size: 12px;
   font-weight: bold;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 180px;
+  width: 50%;
+  margin-right: 15px;
+  font-size: 12px;
 }
 
 form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 34px;
-  padding: 12px;
-  margin-top: 20px 10px 10px 10px;
+  font-size: 24px;
+  padding: 15px;
   width: 100%;
+  margin: 0px 20px 0px 0px;
 }
 
 /* -------  Footer ------- */
@@ -152,105 +164,68 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480px) {
-
-/* Header */
+@media all and (min-width: 800px) {
   header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 30px;
+    background-color: #ff385c;
+    padding: 20px 20px 0 20px;
+    height: 30px;
   }
 
   .logo {
-    margin: 14px 0;
-    padding-top: 0;
-  }
-
-  header nav {
-    margin-top: 30px;
-  }
-
-/* Form */
-  .desktop-form-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-content: center;
-    padding: 0 8px;
-  }
-
-  .form-group {
-    /* Group style for the label and input */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Style for the label and input as one item */
-    flex: 1;
+    display: inline-flex;
     align-self: center;
+    font-family: "Pangolin", cursive;
+    font-size: 24px;
+    color: #fff;
+    margin: 0px 0px 20px 0px;
   }
 
-  /* Style for the label and input as individual items */
-  .form-item {
-    flex: 1;
-    margin: 0;
+  header nav ul {
+    padding-bottom: 0px;
+    max-width: 25%;
+    align-self: flex-end;
+    font-size: 10px;
+    margin: 0px 0px 40px 0px;
   }
 
-  form button {
-    margin: 8px 0;
-  }
-
-  .button-item {
-    flex: 1;
-  }
-
-/* About */
-  .desktop-about-group {
+  form {
+    border: 2px solid #ff385c;
+    padding: 10px;
+    font-family: "CentraNo2", sans-serif;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: space-evenly;
-  }
-  
-  .about-item {
-    flex: 1;
-    margin: 10px;
+    height: 35px;
   }
 
-  /* Sets the paragraph as twice the size of each img item */
-  .double-item {
-    flex: 2;
+  form select,
+  form input {
+    width: 71%;
+    font-size: 12px;
+    margin-bottom: 10px;
   }
 
-/* Ideas */
-  .desktop-ideas-group {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0;
+  .label {
+    float: left;
+    margin: 0px 0px 0px 0px;
   }
 
-  .ideas-item {
-    flex: 0 50%;
-    margin: 10px;
+  .input {
+    float: left;
+  }
+  .dropdown {
+    float: right;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
   }
 
-  .ideas h2 {
-    margin-bottom: 0px;
-  }
-
-/* Host */
-  .desktop-host-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .host-item {
-    flex: 1;
-    margin: 10px;
+  .button {
+    background-color: #ff385c;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    width: 30%;
+    justify-content: right;
+    margin: 0px 20px 0px 0px;
   }
 }
